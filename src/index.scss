@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  //background: linear-gradient(135deg, #d7dbec 0%, #c1c2d7 100%);
+  color: #212645;
+  font-family: "Golos Text", sans-serif;
+  overflow-y: scroll;
+  position: relative;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  max-width: 425px;
+  overflow: hidden;
+  max-height: 750px;
+  margin: auto;
+  background: linear-gradient(135deg, #d7dbec 0%, #c1c2d7 100%);
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: all 700ms linear;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity:0;
+  transition: all 700ms linear;
+}
+
+
+.slide-enter {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
+}
+
+.slide-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-exit-active {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
+}
