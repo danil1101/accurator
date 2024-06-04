@@ -6,6 +6,7 @@ const Onboarding: FC = () => {
 	const [variant, setVariant] = useState(0)
 	const [file, setFile] = useState()
 
+	console.log(file)
 	return (
 		<div className='px-base-x5 py-base-x3 h-full flex flex-col justify-end'>
 			{variant === 0 ? (
