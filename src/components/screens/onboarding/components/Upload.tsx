@@ -1,4 +1,4 @@
-import { FC, RefObject, useEffect, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 
@@ -11,7 +11,7 @@ interface IProps {
 
 const Upload: FC<IProps> = ({ setFile, variant }) => {
 	const [step, setStep] = useState(0)
-	const fileInputRef = useRef<RefObject<HTMLInputElement>>()
+	const fileInputRef = useRef<any>()
 	const navigate = useNavigate()
 
 	useEffect(() => {

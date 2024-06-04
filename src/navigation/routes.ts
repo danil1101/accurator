@@ -4,11 +4,11 @@ import { IRoute } from './navigation.types'
 
 export const routes: IRoute[] = [
 	{
-		path: '/home',
-		component: Home
-	},
-	{
 		path: '/onboarding',
 		component: Onboarding
+	},
+	{
+		path: '/home',
+		component: Home
 	}
 ]
