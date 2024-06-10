@@ -78,14 +78,14 @@ const Upload: FC<IProps> = ({ setFile, variant }) => {
 			>
 				<div className='flex flex-col gap-base-x3'>
 					<div>
-						{/*<Button onClick={() => fileInputRef.current.click()}>
+						<Button onClick={() => fileInputRef.current.click()}>
 							Загрузить
-						</Button>*/}
-						<Button onClick={() => navigate('/home')}>Загрузить</Button>
+						</Button>
+						{/*<Button onClick={() => navigate('/home')}>Загрузить</Button>*/}
 						<input
 							multiple={false}
 							ref={fileInputRef}
-							onChange={setFile}
+							onChange={() => navigate('/home')}
 							accept='image/*'
 							type='file'
 							hidden
