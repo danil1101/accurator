@@ -6,6 +6,7 @@ export default {
 	content: ['./src.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		colors: {
+			green: '#47B28F',
 			white: '#fff',
 			dark: '#212645'
 		},
@@ -23,7 +24,8 @@ export default {
 				'base-x6': '50px'
 			},
 			borderRadius: {
-				'base-x1': '6px'
+				'base-x1': '6px',
+				'base-x2': '16px'
 			},
 			fontSize: {
 				'base-x1': '12px',
@@ -32,6 +34,20 @@ export default {
 				'base-x4': '24px',
 				'base-x5': '32px',
 				'base-x6': '36px'
+			},
+			keyframes: {
+				fadeIn: {
+					'0%': { opacity: 0, transform: 'scale(0.95)' },
+					'100%': { opacity: 1, transform: 'scale(1)' }
+				},
+				fadeOut: {
+					'0%': { opacity: 1, transform: 'scale(1)' },
+					'100%': { opacity: 0, transform: 'scale(0.95)' }
+				}
+			},
+			animation: {
+				fadeIn: 'fadeIn 0.3s ease-out forwards',
+				fadeOut: 'fadeOut 0.3s ease-in forwards'
 			}
 		}
 	}
